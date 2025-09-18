@@ -1,0 +1,223 @@
+/* Общие стили для всей страницы */
+* {
+box-sizing: border-box; /* Изменение модели расчета размеров элементов */
+margin: 0; /* Убираем внешние отступы */
+padding: 0; /* Убираем внутренние отступы */
+}
+
+body {
+font-family: 'Arial', sans-serif; /* Установка основного шрифта */
+background-color: #f5f5f5; /* Светло-серый цвет фона */
+color: #333; /* Темно-серый цвет текста */
+line-height: 1.6; /* Межстрочный интервал */
+padding-bottom: 50px; /* Отступ снизу для body */
+}
+
+/* Стили для шапки сайта */
+header {
+background: linear-gradient(135deg, #d10000 0%, #9b0000 100%); /* Градиентный красный фон */
+color: white; /* Белый цвет текста */
+padding: 25px 0; /* Внутренние отступы сверху и снизу */
+text-align: center; /* Выравнивание по центру */
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Тень под шапкой */
+    /*position: sticky;  Липкое позиционирование */
+    /*top: 0;  Прилипание к верхнему краю */
+z-index: 100; /* Высокий z-index для перекрытия других элементов */
+}
+
+/* Стили для навигационного меню */
+nav {
+margin-top: 15px; /* Внешний отступ сверху */
+}
+
+nav ul {
+list-style-type: none; /* Убираем маркеры списка */
+display: flex; /* Flex-контейнер для горизонтального меню */
+justify-content: center; /* Выравнивание по центру */
+flex-wrap: wrap; /* Разрешаем перенос на новую строку */
+}
+
+nav ul li {
+margin: 5px 15px; /* Внешние отступы для пунктов меню */
+}
+
+nav ul li a {
+color: white; /* Белый цвет текста */
+text-decoration: none; /* Убираем подчеркивание */
+font-weight: bold; /* Жирный шрифт */
+padding: 8px 15px; /* Внутренние отступы */
+border-radius: 20px; /* Скругление углов */
+transition: all 0.3s ease; /* Плавные переходы */
+display: inline-block; /* Строчно-блочный элемент */
+}
+
+nav ul li a:hover {
+background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон при наведении */
+transform: translateY(-2px); /* Слегка поднимаем ссылку при наведении */
+}
+
+/* Стили для основного содержимого */
+main {
+max-width: 1200px; /* Максимальная ширина контента */
+margin: 30px auto; /* Центрирование и внешние отступы */
+padding: 0 20px; /* Внутренние отступы слева и справа */
+}
+
+/* Стили для секций */
+section {
+background-color: white; /* Белый фон секций */
+border-radius: 10px; /* Скругление углов */
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Легкая тень */
+padding: 25px; /* Внутренние отступы */
+margin-bottom: 30px; /* Внешний отступ снизу */
+transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
+}
+
+section:hover {
+transform: translateY(-5px); /* Поднимаем секцию при наведении */
+box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Усиливаем тень при наведении */
+}
+
+/* Стили для заголовков */
+h1 {
+font-size: 2.8rem; /* Размер шрифта главного заголовка */
+text-transform: uppercase; /* Преобразование в верхний регистр */
+letter-spacing: 2px; /* Межбуквенное расстояние */
+margin-bottom: 15px; /* Внешний отступ снизу */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень текста */
+}
+
+h2 {
+color: #d10000; /* Красный цвет заголовков */
+font-size: 1.8rem; /* Размер шрифта */
+border-bottom: 3px solid #d10000; /* Красная линия под заголовком */
+padding-bottom: 10px; /* Внутренний отступ снизу */
+margin-bottom: 20px; /* Внешний отступ снизу */
+display: inline-block; /* Строчно-блочный элемент */
+}
+
+/* Стили для абзацев */
+p {
+margin-bottom: 15px; /* Внешний отступ снизу */
+text-align: justify; /* Выравнивание по ширине */
+line-height: 1.8; /* Межстрочный интервал */
+}
+
+/* Стили для списков */
+ul, ol {
+margin-left: 20px; /* Внешний отступ слева */
+margin-bottom: 20px; /* Внешний отступ снизу */
+}
+
+li {
+margin-bottom: 10px; /* Внешний отступ снизу для элементов списка */
+line-height: 1.6; /* Межстрочный интервал */
+}
+
+/* Стили для таблицы */
+table {
+width: 100%; /* Ширина таблицы на всю доступную ширину */
+border-collapse: collapse; /* Схлопывание границ */
+margin-bottom: 20px; /* Внешний отступ снизу */
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* Легкая тень таблицы */
+}
+
+th, td {
+border: 1px solid #e0e0e0; /* Граница ячеек */
+padding: 15px; /* Внутренние отступы */
+text-align: left; /* Выравнивание текста по левому краю */
+}
+
+th {
+background-color: #d10000; /* Красный фон для заголовков таблицы */
+color: white; /* Белый текст */
+font-weight: bold; /* Жирный шрифт */
+}
+
+tr:nth-child(even) {
+background-color: #f9f9f9; /* Зебровка - чередующийся фон строк */
+}
+
+tr:hover {
+background-color: #f0f0f0; /* Фон строки при наведении */
+}
+
+/* Стили для галереи */
+.gallery-container {
+display: grid; /* Используем CSS Grid для галереи */
+grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Адаптивные колонки */
+gap: 20px; /* Расстояние между элементами */
+margin-top: 20px; /* Внешний отступ сверху */
+}
+
+.gallery-container img {
+width: 100%; /* Ширина изображения на всю ячейку */
+height: 200px; /* Фиксированная высота изображения */
+object-fit: cover; /* Сохранение пропорций с обрезкой */
+border-radius: 8px; /* Скругление углов */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень изображения */
+transition: all 0.3s ease; /* Плавные переходы */
+filter: grayscale(20%); /* Легкий эффект черно-белого */
+}
+
+.gallery-container img:hover {
+transform: scale(1.05); /* Увеличение при наведении */
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Усиление тени при наведении */
+filter: grayscale(0%); /* Убираем черно-белый эффект при наведении */
+z-index: 10; /* Поднимаем изображение над другими элементами */
+}
+
+/* Стили для подвала */
+footer {
+background-color: #333; /* Темный фон подвала */
+color: white; /* Белый текст */
+text-align: center; /* Выравнивание по центру */
+padding: 25px 0; /* Внутренние отступы сверху и снизу */
+margin-top: 50px; /* Внешний отступ сверху */
+}
+
+.footer-content {
+max-width: 1200px; /* Максимальная ширина контента */
+margin: 0 auto; /* Центрирование */
+}
+
+.footer-content p {
+margin-bottom: 10px; /* Внешний отступ снизу для абзацев */
+text-align: center; /* Выравнивание по центру */
+}
+
+.footer-content a {
+color: #ff6b6b; /* Светло-красный цвет ссылок */
+text-decoration: none; /* Убираем подчеркивание */
+font-weight: bold; /* Жирный шрифт */
+transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+
+.footer-content a:hover {
+color: white; /* Белый цвет при наведении */
+text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+h1 {
+font-size: 2rem; /* Уменьшаем размер заголовка на мобильных */
+}
+
+nav ul {
+flex-direction: column; /* Вертикальное меню на мобильных */
+align-items: center; /* Выравнивание по центру */
+}
+
+nav ul li {
+margin: 8px 0; /* Внешние отступы для пунктов меню */
+}
+
+.gallery-container {
+grid-template-columns: 1fr; /* Одна колонка в галерее на мобильных */
+}
+
+section {
+padding: 15px; /* Уменьшаем внутренние отступы на мобильных */
+}
+}
